@@ -81,8 +81,8 @@
             </div>
             <div class="modal-body">
               <form id="Registration" name="Registration" action="/onlineleasing/rcformsave.ashx" method="POST">
-                <input id="formName2" autocomplete="xoff" name="formName2" type="hidden" class="" value="mylistregister">
-                <input id="CTUserVisit" autocomplete="xoff" name="CTUserVisit" type="hidden" class="" value="MTYxOTEwMzk3MCMxMzQzNzkxOTQ3-DV1vD6mCGZo=">
+                <input id="formName2" name="formName2" type="hidden" class="" value="mylistregister">
+                <input id="CTUserVisit" name="CTUserVisit" type="hidden" class="" value="MTYxOTEwMzk3MCMxMzQzNzkxOTQ3">
 
 
                 <!-- Register Form -->
@@ -107,19 +107,19 @@
                   <!-- last name -->
                   <div class="mb-3 row">
                     <label for="txtName2" class="col-sm-4 col-form-label">Last Name<span title="This field is mandatory" aria-label="required" class="text-danger">*</span></label>
-                    <input type="text" value="" name="txtName2" id="txtName2" class="col-sm-7" autocomplete="lastname" placeholder="Your Last Name" required>
+                    <input type="text" value="" name="txtName2" id="txtName2" class="col-sm-7" autocomplete="family-name" placeholder="Your Last Name" required>
                   </div>
 
                   <!-- email -->
                   <div class="mb-3 row">
                     <label for="txtEmail" class="col-sm-4 col-form-label">Email<span title="This field is mandatory" aria-label="required" class="text-danger">*</span></label>
-                    <input type="email" value="" name="txtEmail" id="txtEmail" class="col-sm-7" autocomplete="lastname" placeholder="Your Email" data-bouncer-message="The domain portion of the email address is invalid (the portion after the @)." required>
+                    <input type="email" value="" name="txtEmail" id="txtEmail" class="col-sm-7" autocomplete="email" placeholder="Your Email" data-bouncer-message="The domain portion of the email address is invalid (the portion after the @)." required>
                   </div>
 
                   <!-- password -->
                   <div class="mb-3 row">
                     <label for="txtPassword" class="col-sm-4 col-form-label">Password<span title="This field is mandatory" aria-label="required" class="text-danger">*</span></label>
-                    <input type="password" name="txtPassword" id="txtPassword" class="col-sm-7" placeholder="Password" data-bouncer-message="Please choose a password that includes at least 1 uppercase character, 1 lowercase character, 1 number, 1 symbol and is at least 10 characters long." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*" minlength="10" aria-describedby="password-req password-error" required>
+                    <input type="password" name="txtPassword" id="txtPassword" class="col-sm-7" placeholder="Password" data-bouncer-message="Please choose a password that includes at least 1 uppercase character, 1 lowercase character, 1 number, 1 symbol and is at least 10 characters long." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*" minlength="10" aria-describedby="password-req" required>
                     <div id="password-req" style="font-size: 12px" class="mt-3 mb-1">Password must be a minimum of 10 characters long and must contain all of the following: one lowercase letter, one uppercase letter, one number and one symbol.</div>
                   </div>
 
@@ -202,7 +202,6 @@
 
               <tr>
                 <td class="td-card-name">#1010</td>
-                </td>
                 <td class="td-card-sqft">513</td>
                 <td class="td-card-rent">$1,490</td>
                 <td class="td-card-available">Available</td>
