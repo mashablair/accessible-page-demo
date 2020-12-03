@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 1 version
+*/
+
 .text-3x {
   font-size: 2.5rem;
   line-height: 1.5
@@ -52,9 +59,6 @@
   -o-filter: grayscale(1);
   -ms-filter: grayscale(1);
   filter: grayscale(1);
-  -webkit-transition: all .6s ease;
-  -moz-transition: all .6s ease;
-  -o-transition: all .6s ease;
   transition: all .6s ease
 }
 
@@ -67,9 +71,6 @@
 }
 
 .filter-grayscale-hover {
-  -webkit-transition: all .6s ease;
-  -moz-transition: all .6s ease;
-  -o-transition: all .6s ease;
   transition: all .6s ease
 }
 
@@ -82,9 +83,6 @@
 }
 
 .cover {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover
 }
 
@@ -109,7 +107,8 @@
 }
 
 .object-fit-cover {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #carouselExampleCaptions {
@@ -136,3 +135,20 @@
   color: #dc3545;
 }
 
+/* Cards */
+
+.team-list {
+  margin: 0;
+  padding: 0;
+}
+
+.team-item {
+  list-style: none;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.team-item img {
+  width: 180px;
+  height: 180px;
+}
