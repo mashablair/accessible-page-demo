@@ -1,0 +1,138 @@
+.text-3x {
+  font-size: 2.5rem;
+  line-height: 1.5
+}
+
+@media (max-width: 1200px) {
+  .text-3x {
+      font-size:calc(1.425rem + 2.1vw)
+  }
+}
+
+.font-subheading {
+  font-size: 1.1rem;
+}
+
+.btn-white {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fff
+}
+
+.btn-white:hover {
+  color: #212529;
+  background-color: #ececec;
+  border-color: #e6e6e6
+}
+
+.btn-white:focus {
+  box-shadow: 0 0 0 0.25rem rgba(8, 39, 87, 0.5);
+}
+
+.btn-white.disabled,.btn-white:disabled {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fff
+}
+
+.no-repeat {
+  -webkit-background-repeat: no-repeat;
+  -moz-background-repeat: no-repeat;
+  -o-background-repeat: no-repeat;
+  background-repeat: no-repeat
+}
+
+.text-shadow-1 {
+  text-shadow: 1px 1px 1px #000
+}
+
+.filter-grayscale {
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-transition: all .6s ease;
+  -moz-transition: all .6s ease;
+  -o-transition: all .6s ease;
+  transition: all .6s ease
+}
+
+.filter-grayscale:hover {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -o-filter: grayscale(0);
+  -ms-filter: grayscale(0);
+  filter: grayscale(0)
+}
+
+.filter-grayscale-hover {
+  -webkit-transition: all .6s ease;
+  -moz-transition: all .6s ease;
+  -o-transition: all .6s ease;
+  transition: all .6s ease
+}
+
+.filter-grayscale-hover:hover {
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  filter: grayscale(1)
+}
+
+.cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover
+}
+
+.gradient-bg {
+  background-image: linear-gradient(90deg, #467585, #5892a6);
+  background-color: rgb(31, 29, 29);
+}
+
+.text-2x {
+  font-size: 2rem;
+  line-height: 1.5
+}
+
+@media (max-width: 1200px) {
+  .text-2x {
+      font-size:calc(1.325rem + .9vw)
+  }
+}
+
+.fake-heading-2 {
+  font-size: calc(1.325rem + .9vw);
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+#carouselExampleCaptions {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.carousel-caption {
+  background: #000000b3
+}
+
+.carousel-control-next, .carousel-control-prev {
+  opacity: 1;
+  background: #000000b3;
+  height: 46px;
+  top: 45%;
+}
+
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+  outline: #0a58ca auto 10px;       
+}
+
+.error-message {
+  color: #dc3545;
+}
+

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gardenview Terrace Apartments home page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.webp" alt="Gardenview Terrace logo home page">
+        </a>
+        <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Floor Plans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Map</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container mt-5 mb-5">
+
+    <!-- Intro -->
+    <section>
+      <h1 id="content">Garden View Terrace Apartments</h1>
+      <div>
+        <p>Shoreview Apartments is the place to be if you desire a modern and stylish lifestyle in one of Michigan’s greatest cities. Living in Ann Arbor means you’ll have everything you need right at your fingertips. Our strategically designed floor plans combine generous space and comfort giving you the best of both worlds. Choose from our popular classic design or our newly renovated style featuring granite/quartz counters, stainless-steel appliances, hardwood-like flooring, new cabinetry and so much more.</p>
+
+        <p>Home of the University of Michigan, Ann Arbor possesses some of the best culinary, entertainment, arts &amp; culture, nightlife, shopping, and farmers markets in Southeastern Michigan. Catch a Wolverines game at The Big House, kayak down the Huron River, grab some lunch at A2’s mainstay – Zingerman’s, check out the nightlife on Main or State Street, or get lost in the day at one of the many museums. You’ll be minutes from it all when you live at Shoreview Apartments.</p>
+
+        <p>Call today and see why everyone’s moving to Shoreview Apartments!</p>
+
+        <a class="btn letter-spacing-2 text-white btn-primary" href="#">
+          <i class="fa fa-check mr-2"></i>
+          CHECK AVAILABILITY
+        </a>
+      </div>
+
+      <!-- decorative image -->
+      <img src="https://res.cloudinary.com/yardi/image/upload/q_auto,f_auto/s3qa/themes/serene/images/romance_para.jpg" alt style="max-width:100%" class="mt-5">
+    </section>
+
+    <!-- Contact Us modal and form -->
+    <section class="mt-5">
+      <h2>Interested In Vising Our Property?</h2>
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" aria-label="contact us, opens a dialog">
+        Contact Us
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" title="contact us">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="exampleModalLabel">Contact Us</h2>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close contact us dialog"></button>
+            </div>
+            <div class="modal-body">
+              <form id="Registration" name="Registration" action="/onlineleasing/rcformsave.ashx" method="POST">
+                <input id="formName2" autocomplete="xoff" name="formName2" type="hidden" class="" value="mylistregister">
+                <input id="CTUserVisit" autocomplete="xoff" name="CTUserVisit" type="hidden" class="" value="MTYxOTEwMzk3MCMxMzQzNzkxOTQ3-DV1vD6mCGZo=">
+
+
+                <!-- Register Form -->
+                <div id="Registrationdiv" class="container">
+                  <p><b><span class="text-danger">*</span></b> Required Fields</p>
+
+                  <!-- example of MVC form, REMOVE -->
+                  <!-- <div class="form-group col-12 col-sm-6 floating-label">
+                    <label for="">First Name<span title="This field is mandatory" aria-label="required">*</span></label>
+                    <input type="text" id="" name="name" autocomplete="name" onkeyup="ysi.prequal.alpha(this);" aria-describedby="prequalInvalidFirstname" class="required form-control" placeholder="Your First Name" required>
+                    <div class="invalid-feedback" id="prequalInvalidFirstname" role="alert">
+                      Please provide a valid First Name.
+                    </div>
+                  </div> -->
+
+                  <!-- name -->
+                  <div class="mb-3 row">
+                    <label for="txtName" class="col-sm-4 col-form-label">First Name<span title="This field is mandatory" aria-label="required" class="text-danger">*</span></label>
+                    <input type="text" value="" name="txtName" id="txtName" class="col-sm-7" autocomplete="name" placeholder="Your First Name" required>
+                  </div>
+
+                  <!-- last name -->
+                  <div class="mb-3 row">
+                    <label for="txtName2" class="col-sm-4 col-form-label">Last Name<span title="This field is mandatory" aria-label="required" class="text-danger">*</span></label>
+                    <input type="text" value="" name="txtName2" id="txtName2" class="col-sm-7" autocomplete="lastname" placeholder="Your Last Name" required>
+                  </div>
+
+                  <!-- email -->
+                  <div class="mb-3 row">
+                    <label for="txtEmail" class="col-sm-4 col-form-label">Email<span title="This field is mandatory" aria-label="required" class="text-danger">*</span></label>
+                    <input type="email" value="" name="txtEmail" id="txtEmail" class="col-sm-7" autocomplete="lastname" placeholder="Your Email" data-bouncer-message="The domain portion of the email address is invalid (the portion after the @)." required>
+                  </div>
+
+                  <!-- password -->
+                  <div class="mb-3 row">
+                    <label for="txtPassword" class="col-sm-4 col-form-label">Password<span title="This field is mandatory" aria-label="required" class="text-danger">*</span></label>
+                    <input type="password" name="txtPassword" id="txtPassword" class="col-sm-7" placeholder="Password" data-bouncer-message="Please choose a password that includes at least 1 uppercase character, 1 lowercase character, 1 number, 1 symbol and is at least 10 characters long." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*" minlength="10" aria-describedby="password-req password-error" required>
+                    <div id="password-req" style="font-size: 12px" class="mt-3 mb-1">Password must be a minimum of 10 characters long and must contain all of the following: one lowercase letter, one uppercase letter, one number and one symbol.</div>
+                  </div>
+
+                  <!-- phone -->
+                  <div class="mb-3 row">
+                    <label for="txtPhone" class="col-sm-4 col-form-label">Phone Number</label>
+                    <input type="text" value="" name="txtPhone" data-selenium-id="txtPhone" id="txtPhone" class="col-sm-7" placeholder="(888) 888 - 8888" pattern="^(?:\d{3}[\-]\d{3}[\-]\d{4})$">
+                  </div>
+
+                  <!-- preferred method of contact -->
+                  <!-- <div class="mb-3 row">
+                    <div class="controls" style="display:none">
+                      <div class="get-notified-options-title v-top">Preferred Method of Contact</div>
+                      <div data-toggle="buttons-radio" class="btn-group btn-fancy-radio-outer">
+                        <button id="CallRadioButton" class="btn btn-radio-fancy" type="button" value="1">Call</button>
+                        <button id="PhoneRadioButton" class="btn btn-radio-fancy" type="button" value="2">Text</button>
+                        <button id="EmailRadioButton" class="btn btn-radio-fancy active" type="button" value="3">Email</button>
+                        <span class="radio-button-info hidden m-l-none m-t-xs m-b-xs block muted">Carrier charges may apply.</span>
+                      </div>
+                      <input type="hidden" name="txtPreferredMoC" id="txtPreferredMoC" value="0">
+                    </div>
+                  </div> -->
+
+                  <!-- action btn & links -->
+                  <div class="mt-3 row d-flex justify-content-center">
+                    <button type="submit" class="btn btn btn-primary col-sm-6" name="fakebutton" id="fakebutton">Send My Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Availability table -->
+    <section class="my-5">
+      <h2>Availability</h2>
+      <div class="table-tab-widget">
+        <div class="table-responsive table-card">
+          <table class="table table-bordered">
+            <!-- in this case caption is not necessary, b/c heading describes the table -->
+            <caption>Availability for our property</caption>
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Apartment</th>
+                <th scope="col">Sqft</th>
+                <th scope="col">Rent</th>
+                <th scope="col">Date Available</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-card-name">#1409</td>
+                <td class="td-card-sqft">513</td>
+                <td class="td-card-rent">$1,454</td>
+                <td class="td-card-available">Available</td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1208">Select</button></td>
+              </tr>
+
+              <tr>
+                <td class="td-card-name">#1209</td>
+                <td class="td-card-sqft">513</td>
+                <td class="td-card-rent">$1,434</td>
+                <td class="td-card-available">Available</td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1209">Select</button></td>
+              </tr>
+
+              <tr>
+                <td class="td-card-name">#0909</td>
+                <td class="td-card-sqft">513</td>
+                <td class="td-card-rent">$1,404</td>
+                <td class="td-card-available">Available</td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="0909">Select</button></td>
+              </tr>
+
+              <tr>
+                <td class="td-card-name">#1010</td>
+                </td>
+                <td class="td-card-sqft">513</td>
+                <td class="td-card-rent">$1,490</td>
+                <td class="td-card-available">Available</td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1010">Select</button></td>
+              </tr>
+              <tr>
+                <td class="td-card-name">#1110</td>
+                <td class="td-card-sqft">545</td>
+                <td class="td-card-rent">$1,500</td>
+                <td class="td-card-available">Available</td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1110">Select</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities -->
+    <section class="mt-5 d-flex">
+      <div class="h-lg-60vh h-auto gradient-bg py-5 py-lg-7 px-4 px-md-5 text-white justify-content-center align-items-stretch flex-column d-flex text-center col-12 col-lg-6">
+        <h2 class="font-subheading  letter-spacing-2 text-lg">A LITTLE MORE ABOUT PROPERTY</h2>
+        <div class="mb-4 fake-heading-2 font-heading">Luxury Awaits</div>
+        <p class="mb-5"> Smart space is designed for the way you live. That means providing an extraordinary level of privacy, security and serenity. A thoughtful amenity package means you never have to venture beyond the residences to find solitude, excitement, excellent cuisine or wellness</p>
+
+        <div class="ysi-button-widget ysi-button-wrapper d-block mx-auto">
+          <a data-selenium-id="btn-04" class="btn letter-spacing-2 btn-white" href="/amenities">
+            <i class="far fa-star mr-2"></i>
+            EXPLORE AMENITIES
+          </a>
+        </div>
+      </div>
+
+      <div class="filter-grayscale cover left-top no-repeat justify-content-end align-items-start flex-column d-flex text-left col-sm-6" data-mq-max-width="1199px" style="background-image: url(&quot;https://res.cloudinary.com/yardi/image/upload/q_auto,f_auto,w_496,h_820,c_lfill,g_auto/s3qa/themes/serene/images/amenities_2.jpg&quot;);">
+        <div class="h-100 container-fluid p-0">
+          <div class="no-gutters h-100 row">
+            <div class="custom-img-height border-1 border-left pb-lg-6 pl-lg-4 justify-content-center justify-content-lg-end align-items-lg-start align-items-center flex-column d-flex text-lg-left text-center col-12 offset-lg-1 col-lg-11">
+              <div class="mb-lg-4 text-2x text-shadow-1 font-heading">Providing Lifestyle</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="container-fluid p-0">
+      <div class="no-gutters row">
+        <div class="px-3 bg-white justify-content-center align-items-stretch flex-column d-flex text-center col-12">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height=".884em" viewBox="0 0 82.6 73">
+              <g transform="translate(0 -289.80825)matrix(0.42657396 0 0 0.42657399 -0.7492363 288.65237)">
+                <title lang="en">equal housing opportunity</title>
+                <path d="M98.7 6.8 8.7 51.2V72H18.7v62.5H178V72h12.1V51.2ZM158.5 115.7H38.2V58.6l60.5-30.9 59.8 30.9v57.1z"></path>
+                <path d="M123.3 78.8H67.5V58.6h55.8zm0 28.9H67.5V87.5h55.8z"></path>
+              </g>
+            </svg>
+            <span id="footerText" data-selenium-id="customCopyrightText">© Company level level copyright statement</span><span> | Powered by RENTCafé (© 2020 Yardi Systems, Inc. All Rights Reserved.)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-0">
+      <div class="no-gutters row">
+        <div class="p-3 bg-white justify-content-center align-items-center flex-column d-flex text-center col-12"><img data-name="footer-image" alt="gardenview terrace logo" class="mt-3" src="https://res.cloudinary.com/yardi/image/upload/q_auto,f_auto,c_limit,w_250,h_50/s3qa/2/98407/gardenview_terrace(1).png"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
+  <script src="bouncer.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
