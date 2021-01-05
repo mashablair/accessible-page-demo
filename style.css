@@ -152,3 +152,66 @@
   width: 180px;
   height: 180px;
 }
+
+.social a {
+  padding: 15px 25px 15px 0;
+}
+
+
+
+/* Food Places */
+ul.maplist-items {
+  list-style-type: none;
+  padding: 0
+}
+
+@media only screen and (min-width: 980px) {
+  ul.maplist-items {
+    -moz-column-count: 2;
+    -moz-column-gap: 1.5em;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 1.5em;
+    column-count: 2;
+    column-gap: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  ul.maplist-items {
+    -moz-column-count: 3;
+    -moz-column-gap: 1.5em;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1.5em;
+    column-count: 3;
+    column-gap: 1.5em;
+  }
+}
+
+/* Show More Flag styles */
+.showMore .maplist-items>li {
+  display: none;
+}
+
+.showMore .maplist-items>li:first-child,
+.showMore .maplist-items>li:nth-child(2),
+.showMore .maplist-items>li:nth-child(3),
+.showMore .maplist-items>li:nth-child(4),
+.showMore .maplist-items>li:nth-child(5),
+.showMore .maplist-items>li:nth-child(6) {
+  display: block;
+}
+
+.show-more-btn {
+  display: none;
+  text-transform: lowercase;
+}
+
+.showMore .show-more-btn {
+  display: block;
+}
+
+.showMore .maplist-items[data-show-less]>li {
+  display: block !important;
+}
+
+/* END of Show More Flag styles */

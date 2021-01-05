@@ -3,7 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
+
+  <!-- do this: -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- don't do this: -->
+  <!-- <meta name="viewport" content="width=device-width, maximum-scale=1.0"> -->
+
   <title>Gardenview Terrace Apartments home page</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
   <link rel="stylesheet" href="all.min.css">
@@ -83,23 +89,14 @@
               <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close contact us dialog"></button>
             </div>
             <div class="modal-body">
-              <form id="Registration" name="Registration" action="/onlineleasing/rcformsave.ashx" method="POST">
-                <input id="formName2" name="formName2" type="hidden" class="" value="mylistregister">
-                <input id="CTUserVisit" name="CTUserVisit" type="hidden" class="" value="MTYxOTEwMzk3MCMxMzQzNzkxOTQ3">
 
+              <!-- Form starts here -->
+              <form name="ContactUs" action="/onlineleasing/rcformsave.ashx" method="POST">
+                <input id="formName2" name="formName2" type="hidden" value="mylistregister">
 
                 <!-- Register Form -->
-                <div id="Registrationdiv" class="container">
+                <div class="container">
                   <p><b><span class="text-danger">*</span></b> Required Fields</p>
-
-                  <!-- example of MVC form, REMOVE -->
-                  <!-- <div class="form-group col-12 col-sm-6 floating-label">
-                    <label for="">First Name<span title="This field is mandatory" aria-label="required">*</span></label>
-                    <input type="text" id="" name="name" autocomplete="name" onkeyup="ysi.prequal.alpha(this);" aria-describedby="prequalInvalidFirstname" class="required form-control" placeholder="Your First Name" required>
-                    <div class="invalid-feedback" id="prequalInvalidFirstname" role="alert">
-                      Please provide a valid First Name.
-                    </div>
-                  </div> -->
 
                   <!-- name -->
                   <div class="mb-3 row">
@@ -180,42 +177,42 @@
             </thead>
             <tbody>
               <tr>
-                <td class="td-card-name">#1409</td>
+                <td class="td-card-name" id="unit_1">#1409</td>
                 <td class="td-card-sqft">513</td>
                 <td class="td-card-rent">$1,454</td>
                 <td class="td-card-available">Available</td>
-                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1208">Select</button></td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1208" aria-describedby="unit_1">Select</button></td>
               </tr>
 
               <tr>
-                <td class="td-card-name">#1209</td>
+                <td class="td-card-name" id="unit_2">#1209</td>
                 <td class="td-card-sqft">513</td>
                 <td class="td-card-rent">$1,434</td>
                 <td class="td-card-available">Available</td>
-                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1209">Select</button></td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1209" aria-describedby="unit_2">Select</button></td>
               </tr>
 
               <tr>
-                <td class="td-card-name">#0909</td>
+                <td class="td-card-name" id="unit_3">#0909</td>
                 <td class="td-card-sqft">513</td>
                 <td class="td-card-rent">$1,404</td>
                 <td class="td-card-available">Available</td>
-                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="0909">Select</button></td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="0909" aria-describedby="unit_3">Select</button></td>
               </tr>
 
               <tr>
-                <td class="td-card-name">#1010</td>
+                <td class="td-card-name" id="unit_4">#1010</td>
                 <td class="td-card-sqft">513</td>
                 <td class="td-card-rent">$1,490</td>
                 <td class="td-card-available">Available</td>
-                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1010">Select</button></td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1010" aria-describedby="unit_4">Select</button></td>
               </tr>
               <tr>
-                <td class="td-card-name">#1110</td>
+                <td class="td-card-name" id="unit_5">#1110</td>
                 <td class="td-card-sqft">545</td>
                 <td class="td-card-rent">$1,500</td>
                 <td class="td-card-available">Available</td>
-                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1110">Select</button></td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1110" aria-describedby="unit_5">Select</button></td>
               </tr>
             </tbody>
           </table>
@@ -249,6 +246,62 @@
       </div>
     </section>
 
+    <!-- Nearby Food -->
+    <section class="loc_category mt-5 showMore" id="Food">
+      <h2 id="Food-header">Food</h2>
+      <ul class="maplist-items" id="Food_list">
+        <li><a href="#" role="button">Olive Garden Italian Restaurant</a></li>
+        <li><a href="#" role="button">BJ's Restaurant &amp; Brewhouse</a></li>
+        <li><a href="#" role="button">El Torito</a></li>
+        <li><a href="#" role="button">Gyu-Kaku Japanese BBQ</a></li>
+        <li><a href="#" role="button">Red Robin Gourmet Burgers</a></li>
+        <li><a href="#" role="button">Jamba Juice Westfield Topanga Mall</a></li>
+        <li><a href="#" role="button">STONEFIRE Grill</a></li>
+        <li><a href="#" role="button">Chipotle Mexican Grill</a></li>
+        <li><a href="#" role="button">WaBa Grill</a></li>
+        <li><a href="#" role="button">Red Robin Gourmet Burgers</a></li>
+        <li><a href="#" role="button">Maggiano's Little Italy</a></li>
+        <li><a href="#" role="button">Yard House</a></li>
+        <li><a href="#" role="button">Auntie Anne's Pretzels</a></li>
+        <li><a href="#" role="button">SUBWAY®Restaurants</a></li>
+        <li><a href="#" role="button">Chick-fil-A</a></li>
+        <li><a href="#" role="button">Chinese Gourmet Express</a></li>
+        <li><a href="#" role="button">Szechuwan Garden Restaurant - Authentic Chinese Food in Canoga Park</a></li>
+        <li><a href="#" role="button">Pizza Hut</a></li>
+        <li><a href="#" role="button">Domino's Pizza</a></li>
+        <li><a href="#" role="button">Church's Chicken</a></li>
+        <li><a href="#" role="button">Danny's</a></li>
+        <li><a href="#" role="button">Royal Delhi Palace</a></li>
+        <li><a href="#" role="button">Bale Valley Restaurant</a></li>
+        <li><a href="#" role="button">Sara J Pastries &amp; Cakes</a></li>
+        <li><a href="#" role="button">Dell Taco</a></li>
+        <li><a href="#" role="button">Dahilenazo</a></li>
+        <li><a href="#" role="button">In-N-Out Burger</a></li>
+        <li><a href="#" role="button">Pink Elephant</a></li>
+        <li><a href="#" role="button">Paradise Biryani Pointe</a></li>
+        <li><a href="#" role="button">Poco's Mexican Restaurant</a></li>
+        <li><a href="#" role="button">Little Caesars Pizza</a></li>
+        <li><a href="#" role="button">EL CAMICHIN mexican food / mariscos</a></li>
+        <li><a href="#" role="button">Cancun USA</a></li>
+        <li><a href="#" role="button">Tacos Don Pancho</a></li>
+        <li><a href="#" role="button">Tacos Way</a></li>
+        <li><a href="#" role="button">Two For 1 Pizza Co</a></li>
+        <li><a href="#" role="button">Big Mama's &amp; Papa's Pizzeria - Canoga Location</a></li>
+        <li><a href="#" role="button">Vallarta Supermarkets</a></li>
+        <li><a href="#" role="button">Yanelly's TACOS</a></li>
+        <li><a href="#" role="button">Taqueria El Jaliciense</a></li>
+        <li><a href="#" role="button">Nat's West Cafe</a></li>
+        <li><a href="#" role="button">Pho CT Vietnamese Restaurant</a></li>
+        <li><a href="#" role="button">New Flooky's Restaurant</a></li>
+        <li><a href="#" role="button">Grandma Kim's Family Diner</a></li>
+        <li><a href="#" role="button">Dilli Express</a></li>
+        <li><a href="#" role="button">Taj of India</a></li>
+        <li><a href="#" role="button">Taqueria El Parian</a></li>
+        <li><a href="#" role="button">Bahia</a></li>
+      </ul>
+      <button class="btn btn-link lowercase p-0 btn-sm mb-4 show-more-btn" aria-label="show more Food locations" aria-controls="Food_list">Show More</button>
+    </section>
+
     <!-- Team cards -->
     <section id="team" class="my-5">
 
@@ -260,7 +313,18 @@
             <img src="img/member-1.jpg" alt="Member 1 Alice">
             <figcaption>
               <h3>Alice. W</h3>
-              <p>Chief Executive Officer</p>
+              <p>Property Manager</p>
+              <div class="social">
+                <a aria-label="Facebook" href="#">
+                  <svg viewBox="0 0 32 32" width="25px">
+                    <path d="M 19.253906 2 C 15.311906 2 13 4.0821719 13 8.8261719 L 13 13 L 8 13 L 8 18 L 13 18 L 13 30 L 18 30 L 18 18 L 22 18 L 23 13 L 18 13 L 18 9.671875 C 18 7.884875 18.582766 7 20.259766 7 L 23 7 L 23 2.2050781 C 22.526 2.1410781 21.144906 2 19.253906 2 z" fill="#0d6efd"></path>
+                  </svg>
+                </a>
+                <a aria-label="Twitter" href="#">
+                  <svg viewBox="0 0 32 32" width="25px">
+                    <path d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757813 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820313 12.292969 C 11.726563 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195313 13.722656 C 6.386719 13.695313 5.628906 13.476563 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914063 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039063 9.136719 21.460938 11.289063 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539063 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z" fill="#0d6efd"></path>
+                  </svg></a>
+              </div>
             </figcaption>
           </figure>
         </li>
@@ -269,7 +333,17 @@
             <img src="img/member-2.jpg" alt="Member 2">
             <figcaption>
               <h3>Ben. H</h3>
-              <p>Development Lead</p>
+              <p>Facilities Manager</p>
+              <div class="social">
+                <a aria-label="Facebook" href="#">
+                  <svg viewBox="0 0 32 32" width="25px">
+                    <path d="M 19.253906 2 C 15.311906 2 13 4.0821719 13 8.8261719 L 13 13 L 8 13 L 8 18 L 13 18 L 13 30 L 18 30 L 18 18 L 22 18 L 23 13 L 18 13 L 18 9.671875 C 18 7.884875 18.582766 7 20.259766 7 L 23 7 L 23 2.2050781 C 22.526 2.1410781 21.144906 2 19.253906 2 z" fill="#0d6efd"></path>
+                  </svg></a>
+                <a aria-label="Twitter" href="#">
+                  <svg viewBox="0 0 32 32" width="25px">
+                    <path d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757813 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820313 12.292969 C 11.726563 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195313 13.722656 C 6.386719 13.695313 5.628906 13.476563 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914063 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039063 9.136719 21.460938 11.289063 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539063 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z" fill="#0d6efd"></path>
+                  </svg></a>
+              </div>
             </figcaption>
           </figure>
         </li>
@@ -279,10 +353,33 @@
             <figcaption>
               <h3>Catherine. G</h3>
               <p>Marketing Manager</p>
+              <div class="social">
+                <a aria-label="Facebook" href="#">
+                  <svg viewBox="0 0 32 32" width="25px">
+                    <path d="M 19.253906 2 C 15.311906 2 13 4.0821719 13 8.8261719 L 13 13 L 8 13 L 8 18 L 13 18 L 13 30 L 18 30 L 18 18 L 22 18 L 23 13 L 18 13 L 18 9.671875 C 18 7.884875 18.582766 7 20.259766 7 L 23 7 L 23 2.2050781 C 22.526 2.1410781 21.144906 2 19.253906 2 z" fill="#0d6efd"></path>
+                  </svg></a>
+                <a aria-label="Twitter" href="#">
+                  <svg viewBox="0 0 32 32" width="25px">
+                    <path d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757813 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820313 12.292969 C 11.726563 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195313 13.722656 C 6.386719 13.695313 5.628906 13.476563 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914063 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039063 9.136719 21.460938 11.289063 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539063 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z" fill="#0d6efd"></path>
+                  </svg></a>
+              </div>
             </figcaption>
           </figure>
         </li>
       </ul>
+    </section>
+
+    <!-- Property Map hidden-->
+    <section style="display:none">
+      <h2>Property Map</h2>
+    </section>
+
+    <!-- aria-live example -->
+    <section class="my-5">
+      <h2>Live Region Example</h2>
+      <h3 id="live_region" aria-live="polite" class="alert alert-primary"></h3>
+      <label for="name_live">What's your name?</label>
+      <input type="text" id="name_live">
     </section>
 
   </main>
