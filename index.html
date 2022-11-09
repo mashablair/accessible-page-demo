@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- do this: -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- don't do this: -->
+  <!-- <meta name="viewport" content="width=device-width, maximum-scale=1.0"> -->
+
+  <title>Gardenview Terrace Apartments home page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.webp" alt="Gardenview Terrace logo home page">
+        </a>
+        <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Floor Plans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Map</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-5 mb-5">
+
+    <!-- Intro -->
+    <section>
+      <h1 id="content">Garden View Terrace Apartments</h1>
+      <div>
+        <p>Shoreview Apartments is the place to be if you desire a modern and stylish lifestyle in one of Michigan’s greatest cities. Living in Ann Arbor means you’ll have everything you need right at your fingertips. Our strategically designed floor plans combine generous space and comfort giving you the best of both worlds. Choose from our popular classic design or our newly renovated style featuring granite/quartz counters, stainless-steel appliances, hardwood-like flooring, new cabinetry and so much more.</p>
+
+        <p>Home of the <a href="https://umich.edu/">University of Michigan</a>, Ann Arbor possesses some of the best culinary, entertainment, arts &amp; culture, nightlife, shopping, and farmers markets in Southeastern Michigan. Catch a Wolverines game at The Big House, kayak down the Huron River, grab some lunch at A2’s mainstay – Zingerman’s, check out the nightlife on Main or State Street, or get lost in the day at one of the many museums. You’ll be minutes from it all when you live at Shoreview Apartments.</p>
+
+        <p>Call today and see why everyone’s moving to Shoreview Apartments!</p>
+
+        <a class="btn letter-spacing-2 text-white btn-primary" href="#">
+          <i class="fa fa-check mr-2"></i>
+          Check Availability
+        </a>
+      </div>
+
+      <!-- decorative image -->
+      <img src="https://res.cloudinary.com/yardi/image/upload/q_auto,f_auto/s3qa/themes/serene/images/romance_para.jpg" alt style="max-width:100%" class="mt-5">
+    </section>
+
+    <!-- Contact Us modal and form -->
+    <section class="mt-5">
+      <h2>Interested In Vising Our Property?</h2>
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" aria-label="contact us, opens a dialog">
+        Contact Us
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" title="contact us">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="exampleModalLabel">Contact Us</h2>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close contact us dialog"></button>
+            </div>
+            <div class="modal-body">
+
+              <!-- Form starts here -->
+              <form name="ContactUs" action="/onlineleasing/rcformsave.ashx" method="POST">
+                <input id="formName2" name="formName2" type="hidden" value="mylistregister">
+
+                <!-- Register Form -->
+                <div class="container">
+                  <p><b><span class="text-danger">*</span></b> Required Fields</p>
+
+                  <!-- name -->
+                  <div class="mb-3 row">
+                    <label for="txtName" class="col-sm-4 col-form-label">First Name<span title="This field is mandatory" aria-label="required" class="text-danger">*</span></label>
+                    <input type="text" value="" name="txtName" id="txtName" class="col-sm-7" autocomplete="name" placeholder="Your First Name" required>
+                  </div>
+
+                  <!-- last name -->
+                  <div class="mb-3 row">
+                    <label for="txtName2" class="col-sm-4 col-form-label">Last Name<span title="This field is mandatory" aria-label="required" class="text-danger">*</span></label>
+                    <input type="text" value="" name="txtName2" id="txtName2" class="col-sm-7" autocomplete="family-name" placeholder="Your Last Name" required>
+                  </div>
+
+                  <!-- email -->
+                  <div class="mb-3 row">
+                    <label for="txtEmail" class="col-sm-4 col-form-label">Email<span title="This field is mandatory" aria-label="required" class="text-danger">*</span></label>
+                    <input type="email" value="" name="txtEmail" id="txtEmail" class="col-sm-7" autocomplete="email" placeholder="Your Email" data-bouncer-message="The domain portion of the email address is invalid (the portion after the @)." required>
+                  </div>
+
+                  <!-- password -->
+                  <div class="mb-3 row">
+                    <label for="txtPassword" class="col-sm-4 col-form-label">Password<span title="This field is mandatory" aria-label="required" class="text-danger">*</span></label>
+                    <input type="password" name="txtPassword" id="txtPassword" class="col-sm-7" placeholder="Password" data-bouncer-message="Please choose a password that includes at least 1 uppercase character, 1 lowercase character, 1 number, 1 symbol and is at least 10 characters long." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*" minlength="10" aria-describedby="password-req" required>
+                    <div id="password-req" style="font-size: 12px" class="mt-3 mb-1">Password must be a minimum of 10 characters long and must contain all of the following: one lowercase letter, one uppercase letter, one number and one symbol.</div>
+                  </div>
+
+                  <!-- phone -->
+                  <div class="mb-3 row">
+                    <label for="txtPhone" class="col-sm-4 col-form-label">Phone Number</label>
+                    <input type="text" value="" name="txtPhone" data-selenium-id="txtPhone" id="txtPhone" class="col-sm-7" placeholder="(888) 888 - 8888" pattern="^(?:\d{3}[\-]\d{3}[\-]\d{4})$">
+                  </div>
+
+                  <!-- preferred method of contact -->
+                  <!-- <div class="mb-3 row">
+                    <div class="controls" style="display:none">
+                      <div class="get-notified-options-title v-top">Preferred Method of Contact</div>
+                      <div data-toggle="buttons-radio" class="btn-group btn-fancy-radio-outer">
+                        <button id="CallRadioButton" class="btn btn-radio-fancy" type="button" value="1">Call</button>
+                        <button id="PhoneRadioButton" class="btn btn-radio-fancy" type="button" value="2">Text</button>
+                        <button id="EmailRadioButton" class="btn btn-radio-fancy active" type="button" value="3">Email</button>
+                        <span class="radio-button-info hidden m-l-none m-t-xs m-b-xs block muted">Carrier charges may apply.</span>
+                      </div>
+                      <input type="hidden" name="txtPreferredMoC" id="txtPreferredMoC" value="0">
+                    </div>
+                  </div> -->
+
+                  <!-- action btn & links -->
+                  <div class="mt-3 row d-flex justify-content-center">
+                    <button type="submit" class="btn btn btn-primary col-sm-6" name="fakebutton" id="fakebutton">Send My Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Availability table -->
+    <section class="my-5">
+      <h2>Availability</h2>
+      <div class="table-tab-widget">
+        <div class="table-responsive table-card">
+          <table class="table table-bordered">
+            <!-- in this case caption is not necessary, b/c heading describes the table -->
+            <caption>Availability for our property</caption>
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Apartment</th>
+                <th scope="col">Sqft</th>
+                <th scope="col">Rent</th>
+                <th scope="col">Date Available</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-card-name" id="unit_1">#1409</td>
+                <td class="td-card-sqft">513</td>
+                <td class="td-card-rent">$1,454</td>
+                <td class="td-card-available">Available</td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1208" aria-describedby="unit_1">Select</button></td>
+              </tr>
+
+              <tr>
+                <td class="td-card-name" id="unit_2">#1209</td>
+                <td class="td-card-sqft">513</td>
+                <td class="td-card-rent">$1,434</td>
+                <td class="td-card-available">Available</td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1209" aria-describedby="unit_2">Select</button></td>
+              </tr>
+
+              <tr>
+                <td class="td-card-name" id="unit_3">#0909</td>
+                <td class="td-card-sqft">513</td>
+                <td class="td-card-rent">$1,404</td>
+                <td class="td-card-available">Available</td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="0909" aria-describedby="unit_3">Select</button></td>
+              </tr>
+
+              <tr>
+                <td class="td-card-name" id="unit_4">#1010</td>
+                <td class="td-card-sqft">513</td>
+                <td class="td-card-rent">$1,490</td>
+                <td class="td-card-available">Available</td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1010" aria-describedby="unit_4">Select</button></td>
+              </tr>
+              <tr>
+                <td class="td-card-name" id="unit_5">#1110</td>
+                <td class="td-card-sqft">545</td>
+                <td class="td-card-rent">$1,500</td>
+                <td class="td-card-available">Available</td>
+                <td class="td-card-footer"><button type="button" class="btn btn-primary" id="1110" aria-describedby="unit_5">Select</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities -->
+    <section class="mt-5 d-flex amenities-section">
+      <div class="h-lg-60vh h-auto gradient-bg py-5 py-lg-7 px-4 px-md-5 text-white justify-content-center align-items-stretch flex-column d-flex text-center col-12 col-lg-6">
+        <h2 class="font-subheading  letter-spacing-2 text-lg">A LITTLE MORE ABOUT PROPERTY</h2>
+        <div class="mb-4 fake-heading-2 font-heading">Luxury Awaits</div>
+        <p class="mb-5"> Smart space is designed for the way you live. That means providing an extraordinary level of privacy, security and serenity. A thoughtful amenity package means you never have to venture beyond the residences to find solitude, excitement, excellent cuisine or wellness</p>
+
+        <div class="ysi-button-widget ysi-button-wrapper d-block mx-auto">
+          <a data-selenium-id="btn-04" class="btn letter-spacing-2 btn-white" href="/amenities">
+            <i class="far fa-star mr-2"></i>
+            EXPLORE AMENITIES
+          </a>
+        </div>
+      </div>
+
+      <div class="decoration-section filter-grayscale cover left-top no-repeat justify-content-end align-items-start flex-column d-flex text-left col-sm-6 d-none d-lg-inline" data-mq-max-width="1199px" style="background-image: url(&quot;https://res.cloudinary.com/yardi/image/upload/q_auto,f_auto,w_496,h_820,c_lfill,g_auto/s3qa/themes/serene/images/amenities_2.jpg&quot;);">
+        <div class="h-100 container-fluid p-0">
+          <div class="no-gutters h-100 row">
+            <div class="custom-img-height border-1 border-left pb-lg-6 pl-lg-4 justify-content-center justify-content-lg-end align-items-lg-start align-items-center flex-column d-flex text-lg-left text-center col-12 offset-lg-1 col-lg-11">
+              <div class="mb-lg-4 text-2x text-shadow-1 font-heading">Providing Lifestyle</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nearby Food -->
+    <section class="loc_category mt-5 showMore" id="Food">
+      <h2 id="Food-header">Food</h2>
+      <ul class="maplist-items" id="Food_list">
+        <li><a href="#" role="button">Olive Garden Italian Restaurant</a></li>
+        <li><a href="#" role="button">BJ's Restaurant &amp; Brewhouse</a></li>
+        <li><a href="#" role="button">El Torito</a></li>
+        <li><a href="#" role="button">Gyu-Kaku Japanese BBQ</a></li>
+        <li><a href="#" role="button">Red Robin Gourmet Burgers</a></li>
+        <li><a href="#" role="button">Jamba Juice Westfield Topanga Mall</a></li>
+        <li><a href="#" role="button">STONEFIRE Grill</a></li>
+        <li><a href="#" role="button">Chipotle Mexican Grill</a></li>
+        <li><a href="#" role="button">WaBa Grill</a></li>
+        <li><a href="#" role="button">Red Robin Gourmet Burgers</a></li>
+        <li><a href="#" role="button">Maggiano's Little Italy</a></li>
+        <li><a href="#" role="button">Yard House</a></li>
+        <li><a href="#" role="button">Auntie Anne's Pretzels</a></li>
+        <li><a href="#" role="button">SUBWAY®Restaurants</a></li>
+        <li><a href="#" role="button">Chick-fil-A</a></li>
+        <li><a href="#" role="button">Chinese Gourmet Express</a></li>
+        <li><a href="#" role="button">Szechuwan Garden Restaurant - Authentic Chinese Food in Canoga Park</a></li>
+        <li><a href="#" role="button">Pizza Hut</a></li>
+        <li><a href="#" role="button">Domino's Pizza</a></li>
+        <li><a href="#" role="button">Church's Chicken</a></li>
+        <li><a href="#" role="button">Danny's</a></li>
+        <li><a href="#" role="button">Royal Delhi Palace</a></li>
+        <li><a href="#" role="button">Bale Valley Restaurant</a></li>
+        <li><a href="#" role="button">Sara J Pastries &amp; Cakes</a></li>
+        <li><a href="#" role="button">Dell Taco</a></li>
+        <li><a href="#" role="button">Dahilenazo</a></li>
+        <li><a href="#" role="button">In-N-Out Burger</a></li>
+        <li><a href="#" role="button">Pink Elephant</a></li>
+        <li><a href="#" role="button">Paradise Biryani Pointe</a></li>
+        <li><a href="#" role="button">Poco's Mexican Restaurant</a></li>
+        <li><a href="#" role="button">Little Caesars Pizza</a></li>
+        <li><a href="#" role="button">EL CAMICHIN mexican food / mariscos</a></li>
+        <li><a href="#" role="button">Cancun USA</a></li>
+        <li><a href="#" role="button">Tacos Don Pancho</a></li>
+        <li><a href="#" role="button">Tacos Way</a></li>
+        <li><a href="#" role="button">Two For 1 Pizza Co</a></li>
+        <li><a href="#" role="button">Big Mama's &amp; Papa's Pizzeria - Canoga Location</a></li>
+        <li><a href="#" role="button">Vallarta Supermarkets</a></li>
+        <li><a href="#" role="button">Yanelly's TACOS</a></li>
+        <li><a href="#" role="button">Taqueria El Jaliciense</a></li>
+        <li><a href="#" role="button">Nat's West Cafe</a></li>
+        <li><a href="#" role="button">Pho CT Vietnamese Restaurant</a></li>
+        <li><a href="#" role="button">New Flooky's Restaurant</a></li>
+        <li><a href="#" role="button">Grandma Kim's Family Diner</a></li>
+        <li><a href="#" role="button">Dilli Express</a></li>
+        <li><a href="#" role="button">Taj of India</a></li>
+        <li><a href="#" role="button">Taqueria El Parian</a></li>
+        <li><a href="#" role="button">Bahia</a></li>
+      </ul>
+      <button class="btn btn-link lowercase p-0 btn-sm mb-4 show-more-btn" aria-label="show more Food locations" aria-controls="Food_list">Show More</button>
+    </section>
+
+    <!-- Team cards -->
+    <section id="team" class="my-5">
+
+      <h2>Team</h2>
+
+      <ul class="team-list d-flex flex-wrap">
+        <li class="team-item">
+          <figure>
+            <img src="img/member-1.jpg" alt="Member 1 Alice">
+            <figcaption>
+              <h3>Alice. W</h3>
+              <p>Property Manager</p>
+              <div class="social">
+                <a aria-label="Facebook" href="#">
+                  <svg viewBox="0 0 32 32" width="25px">
+                    <path d="M 19.253906 2 C 15.311906 2 13 4.0821719 13 8.8261719 L 13 13 L 8 13 L 8 18 L 13 18 L 13 30 L 18 30 L 18 18 L 22 18 L 23 13 L 18 13 L 18 9.671875 C 18 7.884875 18.582766 7 20.259766 7 L 23 7 L 23 2.2050781 C 22.526 2.1410781 21.144906 2 19.253906 2 z" fill="#0d6efd"></path>
+                  </svg>
+                </a>
+                <a aria-label="Twitter" href="#">
+                  <svg viewBox="0 0 32 32" width="25px">
+                    <path d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757813 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820313 12.292969 C 11.726563 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195313 13.722656 C 6.386719 13.695313 5.628906 13.476563 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914063 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039063 9.136719 21.460938 11.289063 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539063 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z" fill="#0d6efd"></path>
+                  </svg></a>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="team-item">
+          <figure>
+            <img src="img/member-2.jpg" alt="Member 2">
+            <figcaption>
+              <h3>Ben. H</h3>
+              <p>Facilities Manager</p>
+              <div class="social">
+                <a aria-label="Facebook" href="#">
+                  <svg viewBox="0 0 32 32" width="25px">
+                    <path d="M 19.253906 2 C 15.311906 2 13 4.0821719 13 8.8261719 L 13 13 L 8 13 L 8 18 L 13 18 L 13 30 L 18 30 L 18 18 L 22 18 L 23 13 L 18 13 L 18 9.671875 C 18 7.884875 18.582766 7 20.259766 7 L 23 7 L 23 2.2050781 C 22.526 2.1410781 21.144906 2 19.253906 2 z" fill="#0d6efd"></path>
+                  </svg></a>
+                <a aria-label="Twitter" href="#">
+                  <svg viewBox="0 0 32 32" width="25px">
+                    <path d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757813 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820313 12.292969 C 11.726563 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195313 13.722656 C 6.386719 13.695313 5.628906 13.476563 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914063 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039063 9.136719 21.460938 11.289063 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539063 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z" fill="#0d6efd"></path>
+                  </svg></a>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="team-item">
+          <figure>
+            <img src="img/member-3.jpg" alt="Member 3">
+            <figcaption>
+              <h3>Catherine. G</h3>
+              <p>Marketing Manager</p>
+              <div class="social">
+                <a aria-label="Facebook" href="#">
+                  <svg viewBox="0 0 32 32" width="25px">
+                    <path d="M 19.253906 2 C 15.311906 2 13 4.0821719 13 8.8261719 L 13 13 L 8 13 L 8 18 L 13 18 L 13 30 L 18 30 L 18 18 L 22 18 L 23 13 L 18 13 L 18 9.671875 C 18 7.884875 18.582766 7 20.259766 7 L 23 7 L 23 2.2050781 C 22.526 2.1410781 21.144906 2 19.253906 2 z" fill="#0d6efd"></path>
+                  </svg></a>
+                <a aria-label="Twitter" href="#">
+                  <svg viewBox="0 0 32 32" width="25px">
+                    <path d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757813 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820313 12.292969 C 11.726563 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195313 13.722656 C 6.386719 13.695313 5.628906 13.476563 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914063 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039063 9.136719 21.460938 11.289063 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539063 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z" fill="#0d6efd"></path>
+                  </svg></a>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Property Map hidden-->
+    <section style="display:none">
+      <h2>Property Map</h2>
+    </section>
+
+    <!-- aria-live example -->
+    <section class="my-5">
+      <h2>Live Region Example</h2>
+      <h3 id="live_region" aria-live="polite" class="alert alert-primary"></h3>
+      <label for="name_live">What's your name?</label>
+      <input type="text" id="name_live">
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container-fluid p-0">
+      <div class="no-gutters row">
+        <div class="px-3 bg-white justify-content-center align-items-stretch flex-column d-flex text-center col-12">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height=".884em" viewBox="0 0 82.6 73">
+              <g transform="translate(0 -289.80825)matrix(0.42657396 0 0 0.42657399 -0.7492363 288.65237)">
+                <title lang="en">equal housing opportunity</title>
+                <path d="M98.7 6.8 8.7 51.2V72H18.7v62.5H178V72h12.1V51.2ZM158.5 115.7H38.2V58.6l60.5-30.9 59.8 30.9v57.1z"></path>
+                <path d="M123.3 78.8H67.5V58.6h55.8zm0 28.9H67.5V87.5h55.8z"></path>
+              </g>
+            </svg>
+            <span id="footerText" data-selenium-id="customCopyrightText">© Company level level copyright statement</span><span> | Powered by RENTCafé (© 2020 Yardi Systems, Inc. All Rights Reserved.)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-0">
+      <div class="no-gutters row">
+        <div class="p-3 bg-white justify-content-center align-items-center flex-column d-flex text-center col-12"><img data-name="footer-image" alt="gardenview terrace logo" class="mt-3" src="https://res.cloudinary.com/yardi/image/upload/q_auto,f_auto,c_limit,w_250,h_50/s3qa/2/98407/gardenview_terrace(1).png"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
+  <script src="bouncer.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
